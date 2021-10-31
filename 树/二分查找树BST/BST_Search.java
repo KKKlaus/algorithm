@@ -1,6 +1,6 @@
 public class BST_Search {
 
-    // BST: 左 < 根 < 右
+    // BST: 所有左 < 根 < 所有右
 
     class TreeNode {
         int val;

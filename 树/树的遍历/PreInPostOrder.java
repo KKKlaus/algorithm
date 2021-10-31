@@ -18,7 +18,7 @@ public class PreInPostOrder {
 
     }
 
-    // Recursion 前中后序非常简单
+    // Recursion 非常简单
     public List<Integer> preorderTraversal_recursion(TreeNode root) {
         List<Integer> res= new ArrayList<>();
         helper(root, res);
@@ -47,7 +47,7 @@ public class PreInPostOrder {
         return res;
     }
 
-    // 中序
+    // 中序  -- 重要！ 常用于BST！！！！！
     public List<Integer> inorderTraversal(TreeNode root) {
         Stack<TreeNode> stack = new Stack<>();
         List<Integer> res = new ArrayList<>();
