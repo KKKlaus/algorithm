@@ -5,6 +5,7 @@
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/二分查找树BST" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/树的遍历" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/LCA" isTestSource="false" />
     </content>
     <orderEntry type="jdk" jdkName="11" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
