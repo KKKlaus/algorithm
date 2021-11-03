@@ -1,15 +1,16 @@
 import java.util.HashMap;
 import java.util.Map;
 
-public class Trie_op {
+public class Trie {
+    // 时间复杂度：构建树为所有字符串长度, insert 和search 为单个字符串长度
 
     public static void main(String[] args) {
-        Trie_op trie_op = new Trie_op();
-        trie_op.test();
+        Trie t = new Trie();
+        t.test();
     }
 
     private void test() {
-        Trie trie = new Trie();
+        Trie_ trie = new Trie_();
         trie.insert("apple");
         trie.insert("apptt");
         System.out.println(trie.search("app")); // false
@@ -19,8 +20,9 @@ public class Trie_op {
 
     // Follow up: LC1804. TrieNode加上 count和end来表示单词/前缀数量
 
-    class Trie {
+    class Trie_ {
 
+        // TrieNode 最好放外面
         class TrieNode {
 
             public Map<Character, TrieNode> children;
@@ -35,7 +37,7 @@ public class Trie_op {
 
         private TrieNode root;
 
-        public Trie() {
+        public Trie_() {
             root = new TrieNode(' ');
         }
 
