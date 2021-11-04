@@ -3,6 +3,8 @@ import java.util.Set;
 
 public class MakingALargeIsland {
 
+
+    // 跟 Longest Consecutive Sequence 一个做法，注意Unionfind里的union方法和size[]
     public static void main(String[] args) {
         MakingALargeIsland t = new MakingALargeIsland();
         t.test();
@@ -10,7 +12,7 @@ public class MakingALargeIsland {
 
     public void test() {
         int[][] grid = new int[][]{{0,1},{1,1}};
-        System.out.println(largestIsland(grid));
+        largestIsland(grid);
     }
 
     int[][] dirs = new int[][]{{0,1},{0,-1},{1,0},{-1,0}};
@@ -51,7 +53,6 @@ public class MakingALargeIsland {
         return maxArea;
     }
 
-
     class UnionFind {
 
         int[] parent;
@@ -78,8 +79,13 @@ public class MakingALargeIsland {
             int root_x = find(x);
             int root_y = find(y);
             if (root_x == root_y) return;
-            parent[root_y] = root_x;
-            area[root_x]++;
+            if (area[root_x] >= area[root_y]) {
+                parent[root_y] = root_x;
+                area[root_x] += area[root_y];
+            } else {
+                parent[root_x] = root_y;
+                area[root_y] += area[root_x];
+            }
         }
     }
 }
