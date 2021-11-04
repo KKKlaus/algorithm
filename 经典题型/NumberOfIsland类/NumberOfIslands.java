@@ -3,6 +3,8 @@ import java.util.Queue;
 
 public class NumberOfIslands {
 
+    // 注意number of islands类的题一定要注意把visited set true 不然会有TLE -> 需要看看visited之后有没有set true
+
     public int numIslands_bfs(char[][] grid) {
         if (grid == null || grid.length == 0) return 0;
         int m = grid.length, n = grid[0].length;
