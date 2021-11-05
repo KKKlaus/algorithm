@@ -4,6 +4,8 @@ import java.util.Set;
 
 public class Heap_Remove {
 
+    // 软删除的思想： 不是真的删除，delete的时候只是记下删除的index，当pop的时候才真删除
+
     public static void main(String[] args) {
 
     }

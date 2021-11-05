@@ -4,8 +4,11 @@
     <exclude-output />
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/Trie" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/UnionFind" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Deque" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Heap" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Linedlist" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/TreeMapAndTreeSet" isTestSource="false" />
     </content>
     <orderEntry type="jdk" jdkName="11" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
