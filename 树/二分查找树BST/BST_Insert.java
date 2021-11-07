@@ -27,8 +27,8 @@ public class BST_Insert {
         TreeNode prev = null;
         while (cur != null) {
             prev = cur;
-            if (cur.val < target) cur = cur.left;
-            else cur = cur.right;
+            if (cur.val < target) cur = cur.right;
+            else cur = cur.left;
         }
         if (prev.val < target) prev.right = new TreeNode(target);
         else prev.left = new TreeNode(target);
