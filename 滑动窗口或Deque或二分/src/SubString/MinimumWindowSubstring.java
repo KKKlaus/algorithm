@@ -18,7 +18,7 @@ public class MinimumWindowSubstring {
             while (count == 0) {
                 if (minLen > end - start) {
                     minLen = end - start + 1;
-                    res = s.substring(start, end);
+                    res = s.substring(start, end); // 也可以记住minStart,最后再substring
                 }
                 char c2 = s.charAt(start);
                 map[c2]++;

@@ -1,9 +1,6 @@
 package SubString;
 
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class SubstringWwithConcatenationOfAllWords {
     // -----------选做-----------
@@ -12,48 +9,40 @@ public class SubstringWwithConcatenationOfAllWords {
         findSubstring("barfoofoothefoobarman", new String[]{"foo","bar"});
     }
 
-    public static List<Integer> findSubstring(String S, String[] L) {
-        List<Integer> res = new LinkedList<>();
-        if (L.length == 0 || S.length() < L.length * L[0].length())   return res;
-        int N = S.length();
-        int M = L.length; // *** length
-        int wl = L[0].length();
+    public static List<Integer> findSubstring(String s, String[] words) {
         Map<String, Integer> map = new HashMap<>(), curMap = new HashMap<>();
-        for (String s : L) {
-            if (map.containsKey(s))   map.put(s, map.get(s) + 1);
-            else                      map.put(s, 1);
+        List<Integer> res = new ArrayList<>();
+        for (String word : words) {
+            map.put(word, map.getOrDefault(word, 0) + 1);
         }
-        String str = null, tmp = null;
-        for (int i = 0; i < wl; i++) {
-            int count = 0;  // remark: reset count
-            int start = i;
-            for (int r = i; r + wl <= N; r += wl) {
-                str = S.substring(r, r + wl);
-                if (map.containsKey(str)) {
-                    if (curMap.containsKey(str))   curMap.put(str, curMap.get(str) + 1);
-                    else                           curMap.put(str, 1);
-
-                    if (curMap.get(str) <= map.get(str))    count++;
-                    while (curMap.get(str) > map.get(str)) {
-                        tmp = S.substring(start, start + wl);
-                        curMap.put(tmp, curMap.get(tmp) - 1);
-                        start += wl;
-
-                        //the same as https://leetcode.com/problems/longest-substring-without-repeating-characters/
-                        if (curMap.get(tmp) < map.get(tmp)) count--;
-
-                    }
-                    if (count == M) {
-                        res.add(start);
-                        tmp = S.substring(start, start + wl);
-                        curMap.put(tmp, curMap.get(tmp) - 1);
-                        start += wl;
-                        count--;
-                    }
-                }else {
+        int len = words[0].length();
+        // 要使用双指针方法，这里可能从0-（len-1）开始
+        for (int i = 0; i < len; i++) {
+            int start = i, end = i, count = 0;
+            while (end + len <= s.length()) {
+                String s1 = s.substring(end, end + len);
+                if (!map.containsKey(s1)) {
+                    start = end + len;
+                    end = start;
                     curMap.clear();
                     count = 0;
-                    start = r + wl;//not contain, so move the start
+                    continue;
+                }
+                curMap.put(s1, curMap.getOrDefault(s1, 0) + 1);
+                end += len;
+                if (curMap.get(s1) <= map.get(s1)) count++;
+                while (curMap.get(s1) > map.get(s1)) {
+                    String s2 = s.substring(start, start + len);
+                    curMap.put(s2, curMap.get(s2) - 1);
+                    if (curMap.get(s2) < map.get(s2)) count--;
+                    start += len;
+                }
+                if (count == words.length) {
+                    res.add(start);
+                    String s2 = s.substring(start, start + len);
+                    curMap.put(s2, map.get(s2) - 1);
+                    count--;
+                    start += len;
                 }
             }
             curMap.clear();
