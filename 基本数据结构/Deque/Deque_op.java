@@ -9,7 +9,7 @@ public class Deque_op {
 
     private static void print_deque() {
         Deque<Integer> deque = new ArrayDeque<>();
-        // 一般主要还是queue操作： offerFirst(), offerLast(), pollFirst(), pollLast()
+        // 一般主要还是queue操作 O(1)： offerFirst(), offerLast(), pollFirst(), pollLast()
 
         // queue操作
         deque.offer(1);

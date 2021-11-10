@@ -5,6 +5,8 @@ import java.util.Deque;
 
 public class maxSlidingWindow {
 
+    //Time complexity : O(N), since each element is processed exactly twice - it's index added and then removed from the deque.
+    //Space complexity : O(N), since {O(N−k+1) is used for an output array and O(k) for a deque.
     public static void main(String[] args) {
         int[] res = maxSlidingWindow(new int[]{5,3,2,4}, 3);
         for (int x : res) {

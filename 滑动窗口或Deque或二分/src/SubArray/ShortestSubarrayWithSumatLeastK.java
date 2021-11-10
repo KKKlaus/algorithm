@@ -11,15 +11,20 @@ public class ShortestSubarrayWithSumatLeastK {
         Deque<Integer> deque = new ArrayDeque<>(); // store the index
         int res = Integer.MAX_VALUE;
         for (int i = 0; i < prefixSum.length; i++) {
-            // loop1: make sure the deque is increasing  （1 2 循环调换无所谓）
-            while (!deque.isEmpty() && prefixSum[i] <= prefixSum[deque.peekLast()]) {
-                deque.pollLast();
-            }
-            // loop2
             while (!deque.isEmpty() && prefixSum[i] - prefixSum[deque.peekFirst()] >= k) {
-                int index = deque.pollFirst();
+                int index = deque.pollFirst(); // pop出来因为从他开始再往后的必然会更长
                 // prefix i - prefix[j] -> subarraysum 0 - j - 1.       0 - i - 1
                 res = Math.min(res, i - index);
+            }
+            // loop2: make sure the deque is increasing
+            //  help us make the subarray length shorter and sum bigger. So no need to keep d.back() in our deque.
+            //
+            //More detailed on this, we always add at the LAST position
+            //B[d.back] <- B[i] <- ... <- B[future id]
+            //B[future id] - B[d.back()] >= k && B[d.back()] >= B[i]
+            //B[future id] - B[i] >= k too
+            while (!deque.isEmpty() && prefixSum[i] <= prefixSum[deque.peekLast()]) {
+                deque.pollLast();
             }
             deque.addLast(i);
         }

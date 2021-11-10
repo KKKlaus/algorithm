@@ -2,6 +2,9 @@ import java.util.Stack;
 
 public class RecoverBST {
 
+    // inOrder 有可能是直接两个顺序错误，也有可能是间隔了几个(树为[4,7,null,1,5,null,null,null,null,null,6])
+    // 所以会有if(first == null)的判断，反正第一个顺序不对的肯定是第一个要换的节点，第二个还得继续找
+
     // iterative
     public void recoverTree(TreeNode root) {
         Stack<TreeNode> stack = new Stack<>();
