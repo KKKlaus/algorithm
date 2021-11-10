@@ -7,6 +7,13 @@ public class Heap_Remove {
     // 软删除的思想： 不是真的删除，delete的时候只是记下删除的index，当pop的时候才真删除
 
     public static void main(String[] args) {
+        char c = '8';
+        String c2 = (c - '0' + 1) + "sfsdfds";
+        int temp = c - '0' + 1;
+        char s2 =(char) (temp + '0');
+        char s3 = (char)(c - '0' + 1 + '0');
+        System.out.println(s2);
+        System.out.println(s3);
 
     }
 

@@ -4,6 +4,8 @@ import java.util.HashMap;
 
 public class SubarraysWithKDifferentIntegers {
 
+    // 巧妙!!!!! Just need one more step to reach the folloing equation:
+    //exactly(K) = atMost(K) - atMost(K-1)
     public int subarraysWithKDistinct(int[] nums, int k) {
         return AtMostK(nums, k) - AtMostK(nums, k-1);
     }
