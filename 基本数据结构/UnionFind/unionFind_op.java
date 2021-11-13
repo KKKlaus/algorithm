@@ -3,7 +3,7 @@ import java.util.HashMap;
 public class unionFind_op {
 
 
-    // 一般时间复杂度为O(logN),以最小生成树(MST)Kruskal算法为例，每次unionFind之后相当于把两个节点处理了
+    // 一般时间复杂度O(1) 最坏为O(logN),以最小生成树(MST)Kruskal算法为例，每次unionFind之后相当于把两个节点处理了
     class UnionFind_int {
         private int[] parent = null;
         private int count;
@@ -19,7 +19,7 @@ public class unionFind_op {
             if (parent[x] == x) {
                 return parent[x];
             }
-            parent[x] = find(parent[x]);
+            parent[x] = find(parent[x]);   // 相当于构建了个map
             return parent[x];
         }
 

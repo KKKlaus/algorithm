@@ -5,6 +5,7 @@ public class MakingALargeIsland {
 
 
     // 跟 Longest Consecutive Sequence 一个做法，注意Unionfind里的union方法和size[]
+    // O (m * n)
     public static void main(String[] args) {
         MakingALargeIsland t = new MakingALargeIsland();
         t.test();
@@ -27,6 +28,7 @@ public class MakingALargeIsland {
                     int nx = i + dir[0], ny = j + dir[1];
                     if (nx < 0 || nx >= m || ny < 0 || ny >= n || grid[nx][ny] == 0) continue;
                     uf.union(i * n + j, nx * n + ny);
+                    // 处理如 [[1,1],[1,1]]的情况
                     int root = uf.find(i * n + j);
                     maxArea = Math.max(maxArea, uf.area[root]);
                 }

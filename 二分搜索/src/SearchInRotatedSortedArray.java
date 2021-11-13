@@ -63,4 +63,30 @@ public class SearchInRotatedSortedArray {
 
         return -1;
     }
+
+
+    // 上面的按照模板写
+    public int search_a(int[] nums, int target) {
+        int start = 0, end = nums.length - 1;
+        while (start + 1 < end) {
+            int mid = start + (end - start) / 2;
+            if (nums[mid] == target) return mid;
+            if (nums[mid] > nums[start]) {
+                if (target >= nums[start] && target < nums[mid]) {
+                    end = mid;
+                } else {
+                    start = mid;
+                }
+            } else {
+                if (target <= nums[end] && target > nums[mid]) {
+                    start = mid;
+                } else {
+                    end = mid;
+                }
+            }
+        }
+
+        return nums[start] == target ? start : nums[end] == target ? end : -1;
+
+    }
 }

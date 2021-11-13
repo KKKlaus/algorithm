@@ -1,5 +1,6 @@
 public class wordSearch1 {
     // wordSearch1的时间复杂度  = O(m*n * 4^L) L为单词长度
+    // 需要注意的是dfs中visited要置回false!!!
     public boolean exist(char[][] board, String word) {
         char[] w = word.toCharArray();
         for (int y=0; y<board.length; y++) {

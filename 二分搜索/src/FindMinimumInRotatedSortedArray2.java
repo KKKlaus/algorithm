@@ -1,24 +1,24 @@
 public class FindMinimumInRotatedSortedArray2 {
 
     // 这里用二分模板start + 1 < end 不太行
-    public int findMin(int[] num) {
-        int lo = 0;
-        int hi = num.length - 1;
-        int mid = 0;
-
-        while(lo < hi) {
-            mid = lo + (hi - lo) / 2;
-
-            if (num[mid] > num[hi]) {
-                lo = mid + 1;
+    public int findMin(int[] nums) {
+        int start = 0, end = nums.length - 1;
+        while (start + 1 < end) {
+            int mid = start + (end - start) / 2;
+            // 接下来三行对这道题可以不加，但是如果要求最小值对应的index则需要加，详情见第一个comment: https://leetcode.com/problems/find-minimum-in-rotated-sorted-array-ii/discuss/48808/My-pretty-simple-code-to-solve-it
+            if (nums[end - 1] > nums[end]) {
+                start = end;
+                break;
             }
-            else if (num[mid] < num[hi]) {
-                hi = mid;
-            }
-            else { // when num[mid] and num[hi] are same
-                hi--;
+            if (nums[mid] == nums[end]) {
+                end--;
+            } else if (nums[mid]  > nums[end]) {
+                start = mid;
+            } else {
+                end = mid;
             }
         }
-        return num[lo];
+
+        return Math.min(nums[start], nums[end]);
     }
 }

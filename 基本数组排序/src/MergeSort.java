@@ -7,7 +7,7 @@ public class MergeSort {
     }
 
     public void mergeSort(int[] nums, int l, int r) {
-        if (l >= r) return;
+        if (l >= r) return; 
         int mid = l + (r - l) / 2;
         mergeSort(nums, l, mid);
         mergeSort(nums, mid + 1, r);
