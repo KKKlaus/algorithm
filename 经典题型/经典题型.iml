@@ -9,6 +9,7 @@
       <sourceFolder url="file://$MODULE_DIR$/JumpGame" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/旋转数组" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Word类" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/经典DP" isTestSource="false" />
     </content>
     <orderEntry type="jdk" jdkName="11" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
