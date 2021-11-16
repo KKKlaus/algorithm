@@ -5,7 +5,16 @@ public class WordLadder2 {
     // https://www.youtube.com/watch?v=mIZJIuMpI2M
     // 时间复杂度见leetcode solution
     public static void main(String[] args) {
-        findLadders("red", "tax", Arrays.asList("ted","tex","red","tax","tad","den","rex","pee"));
+//        findLadders("red", "tax", Arrays.asList("ted","tex","red","tax","tad","den","rex","pee"));
+        Set<Integer> set = new HashSet<>();
+        set.add(2);
+        set.add(41);
+        System.out.println(set.size());
+        int x = set.iterator().next();
+        System.out.println(set.size());
+        set.remove(x);
+        set.add(x);
+        x = set.iterator().next();
     }
 
     public static List<List<String>> findLadders(String beginWord, String endWord, List<String> wordList) {

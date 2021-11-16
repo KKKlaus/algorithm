@@ -2,6 +2,8 @@ import java.util.Arrays;
 
 public class CherryPickup {
 
+    // 难得离谱
+
     // O(N^3)  陷阱是错误的以为两遍dp可以解决，但这种贪心做法是不对的
     // Approach #1: Greedy [Wrong Answer]
     //11100
