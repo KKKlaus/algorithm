@@ -16,4 +16,8 @@ Two things which really means a lot
 2:- Dependency Injection means separate   the class which is dependent and inject them when its needed from outside.
 依赖项注入的主要优点是解耦
 
+
+
 其实就是不实例化，而是以参数传过来，而传过来的class往往可能也是个单独的service或者parent class 用到polymorphism/interface等知识
+
+还可以说dependency injection对写unit test有好处，因为new 出来的实例无法mock，而用DI的可以mock测试
