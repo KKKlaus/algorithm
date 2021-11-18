@@ -6,6 +6,7 @@
       <sourceFolder url="file://$MODULE_DIR$/二分查找树BST" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/树的遍历" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/LCA" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/前中后序构建树" isTestSource="false" />
     </content>
     <orderEntry type="jdk" jdkName="11" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />

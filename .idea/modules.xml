@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/BFS和DFS/BFS和DFS.iml" filepath="$PROJECT_DIR$/BFS和DFS/BFS和DFS.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DP类/DP类.iml" filepath="$PROJECT_DIR$/DP类/DP类.iml" />
       <module fileurl="file://$PROJECT_DIR$/Design类/Design类.iml" filepath="$PROJECT_DIR$/Design类/Design类.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/algorithm.iml" filepath="$PROJECT_DIR$/.idea/algorithm.iml" />
       <module fileurl="file://$PROJECT_DIR$/二分搜索/二分搜索.iml" filepath="$PROJECT_DIR$/二分搜索/二分搜索.iml" />
