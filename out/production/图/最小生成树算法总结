@@ -1,3 +1,11 @@
 1. Prim Native implementation O(V2) 稠密图
 2. Prim PriorityQueueDemo implementation O(ElogV) 稀疏图
+    它采取贪心策略，从指定的顶点开始寻找最小权值的邻接点
 3. Kruskal UF implementation O(ElogE) (或者更大范围ElogV，E <= V2) 稀疏图
+
+
+
+
+
+个人理解最小生成树和拓扑排序区别
+1。 前者是带权重的无向图，后者是有向图

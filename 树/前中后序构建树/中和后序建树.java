@@ -1,8 +1,11 @@
+import java.util.Stack;
+
 public class 中和后序建树 {
 
     public static void main(String[] args) {
-        中和后序建树 t = new 中和后序建树();
-        t.test();
+//        中和后序建树 t = new 中和后序建树();
+//        t.test();
+        System.out.println(Integer.hashCode(1));
     }
 
     private void test() {
