@@ -1,0 +1,35 @@
+第一个题inorder traversal iterative, 写完要自己写test case 跑一下，
+follow up是写在此基础上的iterator，按照蠡口格式写了以后和我讨论了可能的invalid input导致的bug以及如何修复。
+又问如果要postorder，应该怎么写。这个真的记不得了，就按照preorder反过来说了一下，不过这样不就不方便改成iterator。
+总之是没有具体写。‍‌‌‌‌‌‌‍‌‌‌‍‍‌‍‌‍‌‌‌最后问如果树太大，怎么加快速度，我觉得在时间复杂度上已经不能加快了，就说可以把树distribute了然后每个机器算一段，感觉不是他想要的答案但是is a way。
+
+用B-树加快查询速度
+
+// 后序
+    public List<Integer> postorderTraversal(TreeNode root) {
+        Stack<TreeNode> stack = new Stack<>();
+        List<Integer> res = new ArrayList<>();
+        if (root != null) stack.push(root);
+        while (!stack.isEmpty()) {
+            TreeNode node = stack.pop();
+            res.add(0, node.val);
+            if (node.left != null) stack.push(node.left);
+            if (node.right != null) stack.push(node.right);
+        }
+        return res;
+    }
+
+
+// 前序
+    public List<Integer> preorderTraversal(TreeNode root) {
+        Stack<TreeNode> stack = new Stack<>();
+        List<Integer> res = new ArrayList<>();
+        if (root != null) stack.push(root);
+        while (!stack.isEmpty()) {
+            TreeNode node = stack.pop();
+            res.add(node.val);
+            if (node.right != null) stack.push(node.right);
+            if (node.left != null) stack.push(node.left);
+        }
+        return res;
+    }
