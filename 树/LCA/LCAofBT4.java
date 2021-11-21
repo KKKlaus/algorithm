@@ -18,9 +18,10 @@ public class LCAofBT4 {
         if (set.contains(root)) return root;
         TreeNode left = helper(root.left);
         TreeNode right = helper(root.right);
-        if (left != null && right != null) return root;
-        if (left == null && right == null) return null;
-        return left == null ? right : left;
+//        if (left != null && right != null) return root;
+//        if (left == null && right == null) return null;
+//        return left == null ? right : left;
+        return left == null ? right : right == null ? left : root;
     }
 
     class TreeNode {
