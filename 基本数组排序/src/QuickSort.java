@@ -1,5 +1,17 @@
 public class QuickSort {
 
+    public static void main(String[] args) {
+        QuickSort q = new QuickSort();
+        q.test();
+    }
+
+    private void test() {
+        int[] nums = sortArray(new int[]{5,4,6,1,7,3,45,13,65,12,2,21});
+        for (int n : nums) {
+            System.out.print(n + " ");
+        }
+    }
+
     public int[] sortArray(int[] nums) {
         quickSort(nums, 0, nums.length - 1);
         return nums;
@@ -20,7 +32,7 @@ public class QuickSort {
             while(low < high && pivot >= nums[low]) ++ low;
             swap(nums, low, high);
         }
-        nums[low] = pivot;
+//        nums[low] = pivot;
         return low;
     }
 

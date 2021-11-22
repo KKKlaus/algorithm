@@ -79,7 +79,6 @@ public class RetainBestCache<K, T extends RetainBestCache.Rankable> {
     public interface DataSource<K, T extends Rankable> {
         T get(K key);
     }
-
 }
 
 

@@ -1,5 +1,6 @@
 public class Bitwise概念 {
 
+    // 可以通过191. Number of 1 Bits学习下
     public static void main(String[] args) {
         //Bitwise 相关概念
         System.out.println(5 << 2); // 5 = 101,左移两位-> 10100 = 20   同理可得>>
