@@ -1,6 +1,6 @@
-import javax.sql.DataSource;
-import java.util.HashMap;
 import java.util.PriorityQueue;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.locks.ReentrantLock;
 
 /* Gets some data. If possible, retrieves it from cache to be fast. If the data is not cached,
  * retrieves it from the data source. If the cache is full, attempt to cache the returned data,
@@ -18,17 +18,19 @@ import java.util.PriorityQueue;
 //2。 Use the Spring framework which got an easy way to cache results of a method with a simple @Cacheable annotation
 //3。 Use one of the synchronized maps like ConcurrentHashMap
 // 4。 laze cache? 不先写入数据库，我的理解是可能之后aschronize去跑？
-public class RetainBestCache<K, T extends RetainBestCache.Rankable> {
+public class ConcurrentRetainBestCache<K, T extends ConcurrentRetainBestCache.Rankable> {
     /* Constructor with a data source (assumed to be slow) and a cache size */
     int entriesToRetain;
-    HashMap<K, T> cache;
+    ConcurrentHashMap<K, T> cache;
     PriorityQueue<Wrapper> pq;
     DataSource<K, T> ds;
-    public RetainBestCache(DataSource<K, T> ds, int entriesToRetain) {
+    ReentrantLock lock;
+    public ConcurrentRetainBestCache(DataSource<K, T> ds, int entriesToRetain) {
         this.entriesToRetain = entriesToRetain;
         this.ds = ds;
-        this.cache = new HashMap<>();
+        this.cache = new ConcurrentHashMap<>();
         this.pq = new PriorityQueue<>((a, b) -> Long.compare(a.value.getRank(), b.value.getRank()));
+        this.lock = new ReentrantLock();
     }
 
     public T get(K key) {
@@ -36,12 +38,16 @@ public class RetainBestCache<K, T extends RetainBestCache.Rankable> {
             return cache.get(key);
         }
         T valueFromDs = ds.get(key);
+        this.lock.lock();
+
         putCache(key, valueFromDs);
+        this.lock.unlock();
+
         return valueFromDs;
     }
 
     public void putCache(K key, T value) {
-        if (cache.size() >= entriesToRetain) {
+        if (cache.size() == entriesToRetain) {
             evict();
         }
 
