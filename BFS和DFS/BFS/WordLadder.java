@@ -55,7 +55,7 @@ public class WordLadder {
 
 
 
-    // 普通bfs，有可能会超时
+    // 普通bfs
     public int ladderLength_bfs(String beginWord, String endWord, List<String> wordList) {
 
         Set<String> wordSet = new HashSet<>(wordList);
@@ -76,7 +76,7 @@ public class WordLadder {
                     for (char c = 'a'; c <= 'z'; c++) {
                         if (c == sb.charAt(j)) continue;
                         String next = sb.substring(0,j) + c + sb.substring(j + 1);
-                        if (!visited.contains(next) && wordList.contains(next)) {
+                        if (!visited.contains(next) && wordSet.contains(next)) {
                             queue.offer(next);
                             visited.add(next);
                         }

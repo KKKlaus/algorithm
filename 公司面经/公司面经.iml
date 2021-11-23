@@ -10,6 +10,8 @@
       <sourceFolder url="file://$MODULE_DIR$/电面/LinkedIn电面/Easy" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/电面/LinkedIn电面/LC题" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/电面/LinkedIn电面/面经非LC题" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/电面/Snap电面" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/电面/Snap电面/11月" isTestSource="false" />
     </content>
     <orderEntry type="jdk" jdkName="11" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />

@@ -1,5 +1,6 @@
 import java.util.ArrayDeque;
 import java.util.Deque;
+import java.util.Stack;
 
 public class Deque_op {
 
@@ -28,5 +29,11 @@ public class Deque_op {
         System.out.println(deque.peekLast()); // 1
         deque.pollFirst();
         System.out.println(deque.peek()); // 1
+
+        Deque<Integer> stack = new ArrayDeque<>();
+        stack.offerFirst(1);
+        stack.offerFirst(2);
+        stack.offerFirst(3);
+        System.out.println(stack.poll() + "-----");
     }
 }
