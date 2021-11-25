@@ -1,5 +1,6 @@
 public class PartitionToKEqualSumSubsets {
 
+    // O（k * 2^n） 个人认为会稍微小一点，因为每找到一个，后面不是2^n,但最坏情况是每次就一个
     public boolean canPartitionKSubsets(int[] nums, int k) {
         int sum = 0;
         for (int num : nums) sum += num;
@@ -10,7 +11,7 @@ public class PartitionToKEqualSumSubsets {
     }
 
     private boolean backtrack(int[] nums, boolean[] used, int start, int k, int curSum, int target) {
-        if (k == 0) return true;
+        if (k == 0) return true;  // 其实k = 1就可以了，最后一块肯定是等于target的
         if (curSum > target) return false;
         if (curSum == target) return backtrack(nums, used, 0, k - 1, 0, target);
 
