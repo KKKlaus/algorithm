@@ -4,6 +4,17 @@ import java.util.Queue;
 
 public class SerializeAndDeserializeBST {
 
+    public static void main(String[] args) {
+        SerializeAndDeserializeBST t = new SerializeAndDeserializeBST();
+        t.test();
+    }
+
+    private void test() {
+        String s = "8,5,1,7,10,12";
+        TreeNode root = deserialize(s);
+        System.out.println("DONE");
+    }
+
     public String serialize(TreeNode root) {
         StringBuilder sb = new StringBuilder();
         serialize(root, sb);

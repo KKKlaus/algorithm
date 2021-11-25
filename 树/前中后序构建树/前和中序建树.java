@@ -1,5 +1,6 @@
 public class 前和中序建树 {
 
+    // hashmap时间优化后为O(n)
     public static void main(String[] args) {
         前和中序建树 t = new 前和中序建树();
         t.test();
@@ -24,7 +25,7 @@ public class 前和中序建树 {
         TreeNode root = new TreeNode(preorder[i]);
         if (n == 1) return root;
         int k = 0;
-        while (inorder[k] != preorder[i]) k++;
+        while (inorder[k] != root.val) k++;       // 一样可以时间优化，hashmap
         int l = k - j;
         root.left = helper(i + 1, j, l);
         root.right = helper(i + 1 + l, k + 1, n - l -1);

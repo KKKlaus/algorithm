@@ -1,5 +1,6 @@
 public class 前和后序建树 {
 
+    // hashmap时间优化后为O(n)
     public static void main(String[] args) {
         前和后序建树 t = new 前和后序建树();
 
@@ -18,7 +19,7 @@ public class 前和后序建树 {
         TreeNode root = new TreeNode(preorder[i]);
         if (n == 1) return root;
         int k = j; // k to find left root in postorder
-        while (postorder[k] != preorder[i + 1]) k++;
+        while (postorder[k] != preorder[i + 1]) k++;     // 时间优化：用hashmap代替
         int l = k - j + 1;
         root.left = helper(i + 1, j, l);
         root.right = helper(i + 1 + l, k + 1, n - l - 1);
