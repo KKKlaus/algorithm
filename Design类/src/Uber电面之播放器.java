@@ -82,6 +82,7 @@ public class Uber电面之播放器 {
             repeatSong = !repeatSong;
         }
 
+        // circular list?
         public void repeatListButton() {
             repeatList = !repeatList;
         }

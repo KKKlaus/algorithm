@@ -3,6 +3,7 @@ import java.util.Queue;
 
 public class JumpGame7 {
 
+    // BFS
     // https://www.youtube.com/watch?v=v1HpZUnQ4Yo
     // O(n)
     public boolean canReach(String s, int minJump, int maxJump) {
