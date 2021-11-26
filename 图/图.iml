@@ -6,6 +6,7 @@
       <sourceFolder url="file://$MODULE_DIR$/MST最小生成树" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/拓扑排序" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/最短路径问题SPFA" isTestSource="false" />
     </content>
     <orderEntry type="jdk" jdkName="11" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
