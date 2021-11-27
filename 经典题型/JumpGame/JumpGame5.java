@@ -1,34 +1,35 @@
-import java.util.Arrays;
+import java.util.*;
 
 // 不错的中文解释：https://www.youtube.com/watch?v=y5hRO6NvOHg
-// 本质上是个有向图的问题
+// 本质上是个有向无环图的问题: 可以画一个有向图，其实就是求最长路径
 // 跟329是类似题！！！！！！！
 public class JumpGame5 {
 
-    // 递归dp (top-down DP)
+    // 递归dp (top-down DP): dfs + memo
     // 时间复杂度 O(nd)
     // 空间复杂度 O(n)
     public int maxJumps(int[] arr, int d) {
-        int[] dp = new int[arr.length];
+        int n = arr.length;
+        int[] memo = new int[n];
         int res = 1;
-        for (int i = 0; i < arr.length; i++) {
-            res = Math.max(res, recursion(dp, arr, i, d));
+        for (int i = 0; i < n; i++) {
+            res = Math.max(res, dfs(arr, d, memo, i));
         }
         return res;
     }
 
-    private int recursion(int[] dp, int[] arr, int cur, int d) {
-        if (dp[cur] != 0) return dp[cur];
-        int sum = 1;
-        for (int i = cur + 1; i <= cur + d && i < arr.length && arr[i] < arr[cur]; i++) {
-            sum = Math.max(sum, 1 + recursion(dp, arr, i, d));
+    private int dfs(int[] arr, int d, int[] memo, int cur) {
+        if (memo[cur] != 0) return memo[cur];
+        int res = 1;
+        for (int i = cur + 1; i < arr.length && i <= cur + d && arr[i] < arr[cur]; i++) {
+            res = Math.max(res, 1 + dfs(arr, d, memo, i));
         }
-        for (int i = cur - 1; i >= cur - d && i >= 0 && arr[i] < arr[cur]; i--) {
-            sum = Math.max(sum, 1 + recursion(dp, arr, i, d));
+        for (int i = cur - 1; i >= 0 && i >= cur - d && arr[i] < arr[cur]; i--) {
+            res = Math.max(res, 1 + dfs(arr, d, memo, i));
         }
 
-        dp[cur] = sum;
-        return dp[cur];
+        memo[cur] = res;
+        return res;
     }
 
 
@@ -59,5 +60,49 @@ public class JumpGame5 {
         }
 
         return res;
+    }
+
+
+    // 方法3：跟329一样可用拓扑排序
+    public int maxJumps_2(int[] arr, int d) {
+        int n = arr.length;
+        int[] indegree = new int[n];
+        HashMap<Integer, List<Integer>> map = new HashMap<>();
+
+        for (int i = 0; i < n; i++) {
+            map.put(i, new ArrayList<>());
+            for (int j = i + 1; j < n && j <= i + d && arr[i] > arr[j]; j++) {
+                indegree[j]++;
+                map.get(i).add(j);
+            }
+            for (int j = i - 1; j >= 0 && j >= i - d && arr[i] > arr[j]; j--) {
+                indegree[j]++;
+                map.get(i).add(j);
+            }
+        }
+
+        Queue<Integer> queue = new LinkedList<>();
+        for (int i = 0; i < n; i++) {
+            if (indegree[i] == 0) {
+                queue.offer(i);
+            }
+        }
+
+        int step = 0;
+        while (!queue.isEmpty()) {
+            int size = queue.size();
+            for (int i = 0; i < size; i++) {
+                int curIndex = queue.poll();
+                for (int nei : map.get(curIndex)) {
+                    indegree[nei]--;
+                    if (indegree[nei] == 0) {
+                        queue.offer(nei);
+                    }
+                }
+            }
+            step++;
+        }
+
+        return step;
     }
 }

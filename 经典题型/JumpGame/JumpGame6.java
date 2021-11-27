@@ -28,7 +28,6 @@ public class JumpGame6 {
 
         return dp[n - 1];
     }
-
     // 时间复杂度O(n), 空间复杂度O(n + k)
     // 别人写的就直接可以用maxSlidingWindow的代码了：先更新dp[i]，再用deque算每次i前面的maxSlidingWindow
     public int maxResult_optimize(int[] nums, int k) {

@@ -1,6 +1,4 @@
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 // 跟JumpGame5同题型
 public class LongestIncreasingPathInAMatrix {
@@ -75,5 +73,52 @@ public class LongestIncreasingPathInAMatrix {
             this.y = y;
             this.val = val;
         }
+    }
+
+
+    // 方法3： 拓扑排序
+    public int longestIncreasingPath_3(int[][] matrix) {
+        int m = matrix.length, n = matrix[0].length;
+        int[][] indegree = new int[m][n];
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                for (int[] dir : dirs) {
+                    int nx = dir[0] + i, ny = dir[1] + j;
+                    if (nx < 0 || nx >= m || ny < 0 || ny >= n) continue;
+                    if (matrix[i][j] > matrix[nx][ny]) {
+                        indegree[i][j]++;
+                    }
+                }
+            }
+        }
+
+        Queue<int[]> queue = new LinkedList<>();
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                if (indegree[i][j] == 0) {
+                    queue.offer(new int[]{i, j});
+                }
+            }
+        }
+
+        int step = 0;
+        while (!queue.isEmpty()) {
+            int size = queue.size();
+            for (int i = 0; i < size; i++) {
+                int[] cur = queue.poll();
+                int x = cur[0], y = cur[1];
+                for (int[] dir : dirs) {
+                    int nx = dir[0] + x, ny = dir[1] + y;
+                    if (nx < 0 || nx >= m || ny < 0 || ny >= n) continue;
+                    if (matrix[nx][ny] > matrix[x][y]) {
+                        indegree[nx][ny]--;
+                        if (indegree[nx][ny] == 0) queue.offer(new int[]{nx, ny});   // 这里一定注意只有入度为0才进，不是常规bfs
+                    }
+                }
+            }
+            step++;
+        }
+
+        return step;
     }
 }
