@@ -1,0 +1,19 @@
+给一个第三方api每次返回M个结果。
+1. 设计一个wrapper function 可以返回N个的结果。
+api call是stateful的，需要记忆上一次的结果。
+2. Catch execption.
+3. 假设N是1M个，怎么优化。python的话用generator.
+
+
+
+
+
+先给我介绍pagenation API,call api得到的结果里面有list 和next page的token。例如：
+这个api.fetechResult(0) --- return {{num1,num2,num3}, 1}
+api.fetechResult(1) --- return {{num4,num5,num6}, 2}
+一个Client class， 不用实现，一个Fetch class，实现fetch(2).  输出前两个数num1，num2
+fet‍‌‌‌‌‌‌‍‌‌‌‍‍‌‍‌‍‌‌‌ch（3）输出第3-5个数，num3，num4，num5
+
+
+
+LC304
