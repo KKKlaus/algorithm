@@ -9,7 +9,7 @@ public class MergeSort {
     public void mergeSort(int[] nums, int l, int r) {
         if (l >= r) return; 
         int mid = l + (r - l) / 2;
-        mergeSort(nums, l, mid);
+        mergeSort(nums, l, mid);             // 这里不是mid -1注意
         mergeSort(nums, mid + 1, r);
         merge(nums, l, r, mid);
     }
