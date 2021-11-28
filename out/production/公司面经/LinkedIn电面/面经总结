@@ -1,0 +1,46 @@
+最近面经： 11/18   whiskey547
+
+题号  次数   难度      题目
+[20]  /6     E      Valid Parentheses
+[23]  /1     H      Merge k Sorted Lists
+[33]  /4     M      Search in Rotated Sorted Array
+[46]  /2     M      Permutations
+[50]  /4     M      Pow(x, n)    ------
+[53]  /7     E      Maximum Subarray
+[152] /4     M      Maximum Product Subarray
+[57]  /2     M      Insert Interval (https://www.1point3acres.com/bbs/thread-795963-1-1.html)
+[61]  /1     E      Rotate List
+[65]  /2     H      Valid Number    ---------
+[224] /1     H      Basic Calculator
+[88]  /1     E      Merge Sorted Array
+[98]  /1     M      Validate Binary Search Tree
+[101] /2     E      Symmetric Tree
+[102] /5     E      Binary Tree Level Order Traversal
+[103] /6     E      Binary Tree Zigzag Level Order Traversal
+[104] /4     E      Maximum Depth of Binary Tree
+[150] /4     M      Evaluate Reverse Polish Notation -> follow up Pow(x, n)
+[156] /3     M      Binary Tree Upside Down
+[200] /1     M      Number of Islands(area list)
+[205] /1     E      Isomorphic Strings              ------- map2[c2] = i + 1;
+[215] /1     M      Kth Largest Element in an Array        --------
+[224] /1     H      Basic Calculator
+[236] /1     M      Lowest Common Ancestor of a Binary Tree
+[243] /7     E      Shortest Word Distance
+[244] /9     M      Shortest Word Distance II
+[359] /1     E      Logger Rate Limiter
+[339] /12    M      Nested List Weight Sum
+[364] /14    M      Nested List Weight Sum II
+[367] /3     E      Valid Perfect Square
+[605] /5     E      Can Place Flowers
+[671] /3     E      Second Minimum Node In a Binary Tree
+[706] /1     E      Design HashMap
+[716] /4     H      Max Stack  (这个TreeMap+DoubleLinkedList再练练)-------------
+[744] /2     E      Find Smallest Letter Greater Than Target
+[1644]/2     M      Lowest Common Ancestor of a Binary Tree II
+[1790]/1     E      Check if One String Swap Can Make Strings Equal
+
+[N/A] /8     M      RetainBestCache
+如何保证thread safe，TreeM‍‌‌‌‌‌‌‍‌‌‌‍‍‌‍‌‍‌‌‌ap vs PriorityQueue
+
+
+有时间再看下LRU/LFU

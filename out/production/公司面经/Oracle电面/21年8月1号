@@ -1,0 +1,23 @@
+
+印度小哥，都是很基础的问题，没有为难我。算法就走了一个two sum的题目，但是要去重，走了2种方法，sort+双指针，这种方法去重简单，直接跳过相同数字，用set的话需要再加一个HashMap去重，直接检查x 和target - x是否在HashMap里，如果在，就跳过。
+
+还问了一些基础知识，
+网页服务特别慢怎么办？
+1，扩容，horizontal scaling, vertical scaling + load balancing
+2，加cache， 问有什么Cache可用？ Redis, Memedcache。 Eviction Policy? LRU, LFU, LRU用得多，LRU如何实现？ DLL + HashMap，为什么？因为可以O（1）查找并删除，找节点需要HashMap去找。如何运作的？举了个例子
+3，访问量大，可以完全并行访问嘛？需要考虑类似mu‍‌‌‌‌‌‌‍‌‌‌‍‍‌‍‌‍‌‌‌ltithread的情况，有的访问需要其他的访问结束才可以。
+
+Spring的优点？什么是Dependence Injection?
+ShortenURl怎么做？一个小的系统设计了
+
+
+Two things which really means a lot
+1:- Main goal of Spring framework is how to decouple relationship between dependent Object
+2:- Dependency Injection means separate   the class which is dependent and inject them when its needed from outside.
+依赖项注入的主要优点是解耦
+
+
+
+其实就是不实例化，而是以参数传过来，而传过来的class往往可能也是个单独的service或者parent class 用到polymorphism/interface等知识
+
+还可以说dependency injection对写unit test有好处，因为new 出来的实例无法mock，而用DI的可以mock测试
