@@ -1,0 +1,5 @@
+OCI非常重视bq -> core value list
+
+
+算法：
+string表示的两个浮点数加法，返回也是一个浮点数string。 -> 转换成double加起来再转换回来？

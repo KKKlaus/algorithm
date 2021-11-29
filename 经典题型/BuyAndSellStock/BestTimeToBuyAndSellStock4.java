@@ -1,6 +1,7 @@
 public class BestTimeToBuyAndSellStock4 {
     // 如果不懂请看解析https://www.youtube.com/watch?v=oDhu5uGq_ic&t=112s
 
+    // k 是transaction的意思，所以dp[k][0] 都等于0，因为完成一次transaction至少需要2天
     public int maxProfit(int K, int[] prices) {
         int n = prices.length;
         if (K == 0 || n == 0) return 0;

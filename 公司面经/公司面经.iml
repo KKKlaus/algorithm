@@ -13,6 +13,7 @@
       <sourceFolder url="file://$MODULE_DIR$/电面/Snap电面/11月" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Onsite" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/电面" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/OA" isTestSource="false" />
     </content>
     <orderEntry type="jdk" jdkName="11" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
