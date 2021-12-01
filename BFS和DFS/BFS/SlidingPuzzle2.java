@@ -3,8 +3,10 @@ import java.util.*;
 public class SlidingPuzzle2 {
 
     public static void main(String[] args) {
-        SlidingPuzzle2 t = new SlidingPuzzle2();
-        t.test();
+//        SlidingPuzzle2 t = new SlidingPuzzle2();
+//        t.test();
+        String s = "ab";
+        System.out.println(s.substring(1,2));
     }
 
     public void test() {
