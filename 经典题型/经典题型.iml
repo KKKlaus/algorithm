@@ -13,6 +13,7 @@
       <sourceFolder url="file://$MODULE_DIR$/Word类" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/经典DP" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Subsequence序列类" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/RangeSumQuery" isTestSource="false" />
     </content>
     <orderEntry type="jdk" jdkName="11" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
