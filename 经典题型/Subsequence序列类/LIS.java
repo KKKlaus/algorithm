@@ -83,7 +83,7 @@ public class LIS {
         List<Node> list = new ArrayList<>();
         for (int num : nums) {
             Node node = new Node(num);
-            int pos = binarySearch_Node(list, num);  // 这里binarySearch加了第一句
+            int pos = binarySearch_Node(list, num);  // binarySearch里面加了第一句
             if(pos != 0) {
                 node.prev = list.get(pos - 1);
             }

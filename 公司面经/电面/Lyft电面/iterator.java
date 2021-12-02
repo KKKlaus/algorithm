@@ -6,12 +6,12 @@ import java.util.Queue;
 
 public class iterator {
 
-    class IntersectionIterator implements Iterator {
+    class IntersectionIterator implements Iterator<Integer> {
         private Integer nextVal = null;
-        Iterator it1;
-        Iterator it2;
+        Iterator<Integer> it1;
+        Iterator<Integer> it2;
 
-        public IntersectionIterator(Iterator it1, Iterator it2) {
+        public IntersectionIterator(Iterator<Integer> it1, Iterator<Integer> it2) {
             this.it1 = it1;
             this.it2 = it2;
             adjust();
@@ -32,8 +32,8 @@ public class iterator {
 
         private void adjust() {
             nextVal = null;
-            Integer val1 = it1.hasNext() ? (Integer) it1.next() : null;
-            Integer val2 = it2.hasNext() ? (Integer) it2.next() : null;
+            Integer val1 = it1.hasNext() ?  it1.next() : null;
+            Integer val2 = it2.hasNext() ?  it2.next() : null;
             while(true) {
                 if(val1 == null || val2 == null) break;
                 if(val1 == val2) {
