@@ -1,0 +1,1 @@
+题是地里那个File Entity的面经题，要求实现一个function计算directory/file的size，添加一个file entity以及给你一个entity，判断是否合法（判断sub directory or file是否存在环。基本的DFS，没啥难度。

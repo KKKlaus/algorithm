@@ -6,7 +6,7 @@ import java.util.List;
 public class Uber电面之播放器 {
 
     /*
-    "Jay Chou", "ABCDE"
+    "Jay Chou", "Dao Xiang"
     "Maroon 5", "Test"
     "Marron 5", "Sugar"
     "Tylor Swift", "Blank Space"
@@ -19,6 +19,31 @@ public class Uber电面之播放器 {
     filter() : filter by Singer
 
      */
+
+    public static void main(String[] args) {
+        Uber电面之播放器 t = new Uber电面之播放器();
+        t.test();
+    }
+
+    private void test() {
+        MusicPlayer player = new MusicPlayer();
+        player.addNewSong("Jay Chou", "Dao Xiang");
+        player.addNewSong("Maroon 5", "Test");
+        player.addNewSong("Maroon 5", "Sugar");
+        player.addNewSong("Tylor Swift", "Blank Space");
+        player.addNewSong("JJ lin", "HAHAHA");
+
+
+        player.filter("Maroon 5");
+        player.repeatListButton();
+        System.out.println(player.next());
+        System.out.println(player.next());
+        System.out.println(player.next());
+        System.out.println(player.next());
+        System.out.println(player.next());
+
+
+    }
 
     class MusicPlayer {
 
@@ -71,6 +96,7 @@ public class Uber电面之播放器 {
          HashSet<String> singerSet = new HashSet<>(); // 单个可以就用个String即可
         // （2）基于完整list再
         public void filter(String singer) {
+            singerSet.clear();
             singerSet.add(singer);
         }
 
@@ -93,6 +119,7 @@ public class Uber电面之播放器 {
             String uuid = key + value;
             if (idToNodeMap.containsKey(uuid)) return;
             idToNodeMap.put(uuid, node);
+            singerSet.add(key);
 
             if (cur == head) cur = head.next; // init current first music
         }

@@ -1,0 +1,45 @@
+---------------------------------------------BQ---------------------------------------------
+critical feedbacks
+bias for risks
+deep dive experience
+learning new things for projects
+tight schedule
+goals would do differently
+help struggling teammates
+difficult customers
+trade off between due dates and p‍‌‌‌‌‌‌‍‌‌‌‍‍‌‍‌‍‌‌‌rocedure
+
+
+Talk about disagreement with manager or colleage
+Have you take something out of ownership
+Talk abou a project that you drive beyond standard
+What improvement you made based on customer feedback
+Have you take risk and do something out of standard
+
+---------------------------------------------系统设计---------------------------------------------
+1.有很多很多温度计分布在这个州的各个角落，设计一个可以展示区域温度的service
+主要和面试官讨论了push 还是pull  : https://www.1point3acres.com/bbs/thread-826223-1-1.html
+2.飞机调度: https://www.1point3acres.com/bbs/thread-826090-1-1.html
+
+
+---------------------------------------------算法---------------------------------------------
+题号   次数   难度      题目
+[253]  /1     M      Meeting Rooms II
+[238]  /1     M      Product of Array Except Self
+[127]  /1     H      Word Ladder
+[200]  /1     M      Number of Islands
+[56]   /1     M      Merge Intervals
+[239]  /1     H      Sliding Window Maximum
+
+
+
+---------------------------------------------其他---------------------------------------------
+1.Design a class that holds a collection of expressions. It support add(expression), delete(expression) and getRandom(). You have to validate the expression to make sure all '(', '['','{' are valid
+Validate只考虑所有括号是闭合的即可。不需要考虑其他的数字或者加减乘除。
+面试官没要求时间复杂度。如果是read heavy (多次call getRandom()), 那么可以在add的时候validate。如果是write heavy。可以每次add的时候不validate， 等到call getRandom()的时候再validate。
+2。 为了降低latency可以做write-back-log，先写入rate limiter缓存，再持久化到数据库，而且偶尔放过几个访问也没关系。
+
+
+
+
+

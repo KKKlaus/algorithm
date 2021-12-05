@@ -7,7 +7,9 @@ import java.util.List;
 public class FindAllAnagramsInAString {
 
     public static void main(String[] args) {
-        findAnagrams("cbaec", "abc");
+//        findAnagrams("cbaec", "abc");
+        String s = "";
+        s.split(",");
     }
 
     public static List<Integer> findAnagrams(String s, String p) {

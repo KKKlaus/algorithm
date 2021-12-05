@@ -33,4 +33,38 @@ public class SplitArrayLargestSum {
         }
         return true;
     }
+
+
+    // 自己写比较看得懂的
+    public int splitArray_2(int[] nums, int m) {
+        int max = 0, sum = 0;
+        for (int num : nums) {
+            max = Math.max(max, num);
+            sum += num;
+        }
+
+        int start = max, end = sum;
+        while (start < end) {
+            int mid = start + (end - start) / 2;
+            if (isValid(nums, m, mid)) {
+                end = mid;
+            } else {
+                start = mid + 1;
+            }
+        }
+        return start;
+    }
+
+    private boolean isValid(int[] nums, int m, int mid) {
+        int sum = 0;
+        for (int num : nums) {
+            sum += num;
+            if (sum > mid) {
+                m--;
+                sum = num;
+            }
+        }
+        m--;
+        return m >= 0;
+    }
 }

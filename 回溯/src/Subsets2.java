@@ -23,4 +23,19 @@ public class Subsets2 {
             temp.remove(temp.size() - 1);
         }
     }
+
+
+    // subset2和permutation2可以用一样的方法used
+    private void backtrack_(int[] nums, List<List<Integer>> res, List<Integer> temp, int start, boolean[] used) {
+        res.add(new ArrayList<>(temp));
+
+        for (int i = start; i < nums.length; i++) {
+            if (i != 0 && (nums[i] == nums[i - 1] && !used[i - 1])) continue;
+            used[i] = true;
+            temp.add(nums[i]);
+            backtrack_(nums, res, temp, i + 1, used);
+            temp.remove(temp.size() - 1);
+            used[i] = false;
+        }
+    }
 }
