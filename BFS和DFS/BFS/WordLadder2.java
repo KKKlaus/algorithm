@@ -5,81 +5,68 @@ public class WordLadder2 {
     // https://www.youtube.com/watch?v=mIZJIuMpI2M
     // 时间复杂度见leetcode solution
     public static void main(String[] args) {
-//        findLadders("red", "tax", Arrays.asList("ted","tex","red","tax","tad","den","rex","pee"));
-        Set<Integer> set = new HashSet<>();
-        set.add(2);
-        set.add(41);
-        System.out.println(set.size());
-        int x = set.iterator().next();
-        System.out.println(set.size());
-        set.remove(x);
-        set.add(x);
-        x = set.iterator().next();
+        findLadders("hit", "cog", Arrays.asList("hot","dot","dog","lot","log","cog"));
     }
 
     public static List<List<String>> findLadders(String beginWord, String endWord, List<String> wordList) {
-        HashSet<String> wordSet = new HashSet<>(wordList);
-        HashMap<String, List<String>> neighbors = new HashMap<>();
-        HashMap<String, Integer> levelMap = new HashMap<>();
+        HashSet<String> wordSet = new HashSet<String>(wordList);
         List<List<String>> res = new ArrayList<>();
+        HashMap<String, List<String>> nodeNeighbors = new HashMap<>();
+        HashMap<String, Integer> distance = new HashMap<>();
 
-        bfs(beginWord, endWord, wordSet, neighbors, levelMap);
-        dfs(beginWord, endWord, neighbors, levelMap, new ArrayList<>(), res);
+        wordSet.add(beginWord);
+        bfs(beginWord, endWord, wordSet, nodeNeighbors, distance);
+        dfs(beginWord, endWord, nodeNeighbors, distance, res, new ArrayList<>());
         return res;
     }
 
-    public static void bfs(String beginWord, String endWord, HashSet<String> wordSet, HashMap<String, List<String>> neighbors, HashMap<String, Integer> levelMap) {
+    private static void bfs(String beginWord, String endWord, HashSet<String> wordSet, HashMap<String, List<String>> nodeNeighbors, HashMap<String, Integer> distance) {
+        for (String s : wordSet) {
+            nodeNeighbors.put(s, new ArrayList<>());
+        }
+
         Queue<String> queue = new LinkedList<>();
         queue.offer(beginWord);
-        levelMap.put(beginWord, 0);
+        distance.put(beginWord, 0);
 
         while (!queue.isEmpty()) {
             int size = queue.size();
             boolean found = false;
-            for (int i = 0; i < size; i++) {
+            for (int k = 0; k < size; k++) {
                 String cur = queue.poll();
-                int curLevel = levelMap.get(cur);
-                StringBuilder sb = new StringBuilder(cur);
-                for (int j = 0; j < sb.length(); j++) {
-                    for (char c = 'a'; c <= 'z'; c++) {
-                        if (c == sb.charAt(j)) continue;
-                        String next = sb.substring(0,j) + c + sb.substring(j + 1);
-                        if (!wordSet.contains(next)) continue;
-                        if (!neighbors.containsKey(cur)) neighbors.put(cur, new ArrayList<>());
-                        neighbors.get(cur).add(next);
-                        if (!levelMap.containsKey(next)) {
-                            levelMap.put(next, curLevel + 1);
-                            if (endWord.equals(next)) {
+                int curDistance = distance.get(cur);
+                for (int i = 0; i < cur.length(); i++) {
+                    for (char ch = 'a'; ch <= 'z'; ch++) {
+                        if (ch == cur.charAt(i)) continue;
+                        String neighbor = cur.substring(0, i) + ch + cur.substring(i + 1);
+                        if (!wordSet.contains(neighbor)) continue;
+                        nodeNeighbors.get(cur).add(neighbor);
+                        if (!distance.containsKey(neighbor)) { // check if exist
+                            distance.put(neighbor, curDistance + 1);
+                            queue.offer(neighbor);
+                            if (neighbor.equals(endWord)) {
                                 found = true;
-                            } else {
-                                queue.offer(next);
                             }
                         }
                     }
                 }
-
             }
-
             if (found) break;
         }
     }
 
-
-    public static void dfs(String curWord, String endWord, HashMap<String, List<String>> neighbors, HashMap<String, Integer> levelMap, List<String> path,  List<List<String>> res) {
-        path.add(curWord);
-        if (curWord.equals(endWord)) {
-            res.add(new ArrayList<>(path));
+    private static void dfs(String cur, String end, HashMap<String, List<String>> nodeNeighbors, HashMap<String, Integer> distance, List<List<String>> res, List<String> temp) {
+        temp.add(cur);
+        if (cur.equals(end)) {
+            res.add(new ArrayList<>(temp));
         } else {
-            if (neighbors.containsKey(curWord)) {
-                for (String neighbor : neighbors.get(curWord)) {
-                    if (levelMap.get(neighbor) == levelMap.get(curWord) + 1) {
-                        dfs(neighbor, endWord, neighbors, levelMap, path, res);
-                    }
+            for (String next : nodeNeighbors.get(cur)) {
+                if (distance.get(next) == distance.get(cur) + 1) {
+                    dfs(next, end, nodeNeighbors, distance, res, temp);
                 }
             }
-
         }
 
-        path.remove(path.size() - 1);
+        temp.remove(cur);
     }
 }

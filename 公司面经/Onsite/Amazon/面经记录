@@ -12,7 +12,7 @@ trade off between due dates and p‍‌‌‌‌‌‌‍‌‌‌‍‍‌‍�
 
 Talk about disagreement with manager or colleage
 Have you take something out of ownership
-Talk abou a project that you drive beyond standard
+Talk about a project that you drive beyond standard
 What improvement you made based on customer feedback
 Have you take risk and do something out of standard
 
@@ -22,20 +22,37 @@ Have you take risk and do something out of standard
 2.飞机调度: https://www.1point3acres.com/bbs/thread-826090-1-1.html
 3. Voting System  --- topK?
 4. Amazon music top 10 list for each user -- topK!
-5. 为亚麻设计一个搜索引擎，搜索货品，货品有上千万个。货品名称是string and unique [a-z 0-9]。货品还会经常刷新。 还需要这个搜索窗口能够Auto populate， 比方说，输入 iph 的话就能够自动联想 iPhone 11， iphone11+ 等。
+5. 为亚麻设计一个搜索引擎，搜索货品，货品有上千万个。货品名称是string and unique [a-z 0-9]。货品还会经常刷新。 还需要这个搜索窗口能够Auto complete， 比方说，输入 iph 的话就能够自动联想 iPhone 11， iphone11+ 等。
+6. task schedule system
+7。 job scheduler
+8。 design amazon books
+9. shorten URLs
+10. 飞机起落调度系统
+
+
+ood 设计简单版德州扑克
+
 
 ---------------------------------------------算法---------------------------------------------
 题号   次数   难度      题目
-[253]  /1     M      Meeting Rooms II
-[238]  /1     M      Product of Array Except Self
-[200]  /2     M      Number of Islands
-[127]  /1     H      Word Ladder
 [56]   /1     M      Merge Intervals
-[239]  /1     H      Sliding Window Maximum
-[642]  /1     H      Design Search Autocomplete System
-[207]  /1     M      Course Schedule
-[288]  /1     H      Design In-Memory File System
+[91]   /1     M      Decode Ways
+[127]  /1     H      Word Ladder
 [145]  /2     M      LRU Cache
+[200]  /2     M      Number of Islands
+[207]  /1     M      Course Schedule
+[212]  /1     H      Word Search II
+[236]  /1     M      Lowest Common Ancestor of a Binary Tree
+[238]  /1     M      Product of Array Except Self
+[239]  /1     H      Sliding Window Maximum
+[253]  /1     M      Meeting Rooms II
+[288]  /1     H      Design In-Memory File System
+[329]  /1     H      Longest Increasing Path in a Matrix
+[341]  /1     M      Flatten Nested List Iterator
+[394]  /1     M      Decode String
+[642]  /1     H      Design Search Autocomplete System
+[695]  /1     M      Max Area of Island
+[472]  /1     H      Concatenated Words
 
 
 ---------------------------------------------其他---------------------------------------------

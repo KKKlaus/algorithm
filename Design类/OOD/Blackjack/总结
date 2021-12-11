@@ -1,0 +1,2 @@
+最难的点是Player的public List<Integer> getScore() {方法
+因为A可以代表1和11

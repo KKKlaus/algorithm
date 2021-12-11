@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
+// 类似题目比如找离某个点最远的，反正想法就是把树看成图，用bfs做
 public class FindDistanceinaBinaryTree {
 
     public static void main(String[] args) {

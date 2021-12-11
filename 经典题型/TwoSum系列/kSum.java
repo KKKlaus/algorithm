@@ -34,12 +34,10 @@ public class kSum {
             for (int i = index; i < nums.length - k + 1; i++) {
                 if (i != index && nums[i] == nums[i - 1]) continue;
                 ArrayList<List<Integer>> temp = kSum(nums, target - nums[i], k - 1, i + 1);
-                if (temp != null) {
-                    for (List<Integer> t : temp) {
-                        t.add(0, nums[i]);
-                    }
-                    res.addAll(temp);
+                for (List<Integer> t : temp) {
+                    t.add(0, nums[i]);
                 }
+                res.addAll(temp);
             }
         }
         return res;

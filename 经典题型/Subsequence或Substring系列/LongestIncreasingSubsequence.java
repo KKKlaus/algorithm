@@ -1,7 +1,7 @@
 import java.util.*;
 
 // 如有不懂，参考youtube视频https://www.youtube.com/watch?v=l2rCz7skAlk
-public class LIS {
+public class LongestIncreasingSubsequence {
 
     // 方法1：非常经典的dp : O(N*N)
     public int lengthOfLIS(int[] nums) {
@@ -63,7 +63,7 @@ public class LIS {
     }
 
     public static void main(String[] args) {
-        LIS t = new LIS();
+        LongestIncreasingSubsequence t = new LongestIncreasingSubsequence();
         t.test();
     }
 

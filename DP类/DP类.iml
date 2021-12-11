@@ -6,6 +6,7 @@
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/概率型" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/背包型" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/经典DP" isTestSource="false" />
     </content>
     <orderEntry type="jdk" jdkName="11" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />

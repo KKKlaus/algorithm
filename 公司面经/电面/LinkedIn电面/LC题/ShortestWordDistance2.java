@@ -2,7 +2,7 @@ import java.util.*;
 
 //      （*两个方法都要掌握 看哪个api调用的频次更高 应该尽可能的降低该api的时间复杂度 即使会令另一个api复杂度更高*）
 //        1. 方法1， 针对每个字典存入a list of index， 拿出来之后比较，注意这里的list是sorted的，可以双指针遍历
-//        2. 方法2， 先优先把所有key pair的距离记录下来，这样shortest可以直接call
+//        2. 方法2， shortest call 很多次时： 先优先把所有key pair的距离记录下来，这样shortest可以直接call
 public class ShortestWordDistance2 {
 
     // 方法1
