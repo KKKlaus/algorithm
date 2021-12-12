@@ -8,6 +8,7 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/algorithm.iml" filepath="$PROJECT_DIR$/.idea/algorithm.iml" />
       <module fileurl="file://$PROJECT_DIR$/二分搜索/二分搜索.iml" filepath="$PROJECT_DIR$/二分搜索/二分搜索.iml" />
       <module fileurl="file://$PROJECT_DIR$/公司面经/公司面经.iml" filepath="$PROJECT_DIR$/公司面经/公司面经.iml" />
+      <module fileurl="file://$PROJECT_DIR$/单调栈和单调队列/单调栈和单调队列.iml" filepath="$PROJECT_DIR$/单调栈和单调队列/单调栈和单调队列.iml" />
       <module fileurl="file://$PROJECT_DIR$/回溯/回溯.iml" filepath="$PROJECT_DIR$/回溯/回溯.iml" />
       <module fileurl="file://$PROJECT_DIR$/图/图.iml" filepath="$PROJECT_DIR$/图/图.iml" />
       <module fileurl="file://$PROJECT_DIR$/基本数据结构/基本数据结构.iml" filepath="$PROJECT_DIR$/基本数据结构/基本数据结构.iml" />
@@ -15,7 +16,9 @@
       <module fileurl="file://$PROJECT_DIR$/扫描线/扫描线.iml" filepath="$PROJECT_DIR$/扫描线/扫描线.iml" />
       <module fileurl="file://$PROJECT_DIR$/树/树.iml" filepath="$PROJECT_DIR$/树/树.iml" />
       <module fileurl="file://$PROJECT_DIR$/滑动窗口或Deque或二分/滑动窗口或Deque或二分.iml" filepath="$PROJECT_DIR$/滑动窗口或Deque或二分/滑动窗口或Deque或二分.iml" />
+      <module fileurl="file://$PROJECT_DIR$/线段树/线段树.iml" filepath="$PROJECT_DIR$/线段树/线段树.iml" />
       <module fileurl="file://$PROJECT_DIR$/经典题型/经典题型.iml" filepath="$PROJECT_DIR$/经典题型/经典题型.iml" />
+      <module fileurl="file://$PROJECT_DIR$/超长字符串处理/超长字符串处理.iml" filepath="$PROJECT_DIR$/超长字符串处理/超长字符串处理.iml" />
       <module fileurl="file://$PROJECT_DIR$/链表/链表.iml" filepath="$PROJECT_DIR$/链表/链表.iml" />
       <module fileurl="file://$PROJECT_DIR$/高频题(部分)/高频题(部分).iml" filepath="$PROJECT_DIR$/高频题(部分)/高频题(部分).iml" />
     </modules>

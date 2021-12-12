@@ -1,1 +1,16 @@
 题是地里那个File Entity的面经题，要求实现一个function计算directory/file的size，添加一个file entity以及给你一个entity，判断是否合法（判断sub directory or file是否存在环。基本的DFS，没啥难度。
+
+
+
+
+
+
+题号    次数    难度   题目
+[36]    /1     M     Valid Sudoku
+[37]    /1     H     Sudoku Solver
+[124]   /1     H     Binary Tree Maximum Path Sum
+[224]   /1     H     Basic Calculator I
+[227]   /1     M     Basic Calculator II
+[772]   /1     H     Basic Calculator III
+[295]   /1     H     Find Median from Data Stream
+[1765]  /1     M     Map of Highest Peak

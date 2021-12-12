@@ -1,1 +1,33 @@
 题是地里那个File Entity的面经题，要求实现一个function计算directory/file的size，添加一个file entity以及给你一个entity，判断是否合法（判断sub directory or file是否存在环。基本的DFS，没啥难度。
+
+
+
+
+
+
+题号    次数    难度   题目
+[36]    /1     M     Valid Sudoku
+[37]    /1     H     Sudoku Solver
+[124]   /1     H     Binary Tree Maximum Path Sum
+[224]   /1     H     Basic Calculator I
+[227]   /1     M     Basic Calculator II
+[772]   /1     H     Basic Calculator III
+[295]   /1     H     Find Median from Data Stream
+[410]   /1     H     Split Array Largest Sum
+[418]   /1     M     Sentence Screen Fitting
+[792]   /1     M     Number of Matching Subsequences
+[853]   /1     M     Car Fleet
+[1776]  /1     H     Car Fleet II
+[1765]  /1     M     Map of Highest Peak
+
+
+[N/A]   /1           maxValueInQueue
+[N/A]   /2     H     Cord Tree/Rope Tree!!!
+
+
+给定一个树，每个node有length field 叶子结点有data field，length field 此节点的所有叶子的data 长度之和
+root(5) => left((3,"aaa"))
+     => right((2, "bb"))
+this represents "aaabb"
+1. find the k the character in this node
+2. remove [l:r) from the tree.
