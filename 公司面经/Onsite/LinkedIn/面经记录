@@ -1,0 +1,25 @@
+----------------Concurrency--------------
+经典delayed task scheduler 设计。
+
+
+
+----------------Data Structures & Algorithms--------------
+设计一个key value store，constraint是一个机器上只有100k文件。你可以利用的接口是
+1. create a file
+2. delete a file
+3. append something to‍‌‌‌‌‌‌‍‌‌‌‍‍‌‍‌‍‌‌‌ a file.
+
+----------------Complex Systems------------
+次数     题目
+2        设计一个top k 系统统计分享最多的文章。需要 last 5 min last 1 hour, last 1 week etc.
+
+
+
+题号    次数    难度   题目
+[5]     /1     M     Longest Palindromic Substring
+[366]   /1     M     Find Leaves of Binary Tree          1) 两个children 最后连到同一个leaf怎么办。2) 一个node出现两次怎么办？类似无限循环了。我‍‌‌‌‌‌‌‍‌‌‌‍‍‌‍‌‍‌‌‌给的是用一个visited来标注。他说还行。最后他给的是用map来存每个node的level。这样的话第一种情况可以handle。第二种情况让他exception out。
+[432]   /1     H     All O`one Data Structure
+[716]   /1     M     Max Stack
+
+
+

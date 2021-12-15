@@ -1,4 +1,4 @@
-public class 模板 {
+public class SegmentTree {
 
     class SegmentTreeNode {
         int start, end, sum;
@@ -14,6 +14,7 @@ public class 模板 {
     }
 
     private SegmentTreeNode buildHelper(int[] A, int start, int end) {
+        if (start > end) return null;
         SegmentTreeNode node = new SegmentTreeNode(start, end, 0);
         if (start == end) {
             node.sum = A[start];

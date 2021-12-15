@@ -12,22 +12,32 @@
 [224]   /1     H     Basic Calculator I
 [227]   /1     M     Basic Calculator II
 [772]   /1     H     Basic Calculator III
+[286]   /1     M     Walls and Gates
 [295]   /1     H     Find Median from Data Stream
 [410]   /1     H     Split Array Largest Sum
 [418]   /1     M     Sentence Screen Fitting
+[735]   /1     M     Asteroid Collision
 [792]   /1     M     Number of Matching Subsequences
 [853]   /1     M     Car Fleet
 [1776]  /1     H     Car Fleet II
 [1765]  /1     M     Map of Highest Peak
+[1937]  /1     M     Maximum Number of Points with Cost
+[2096]  /1     M     Step-By-Step Directions From a Binary Tree Node to Another
 
 
 [N/A]   /1           maxValueInQueue
-[N/A]   /2     H     Cord Tree/Rope Tree!!!
+[N/A]   /2     H     Cord Tree/Rope Tree/Segment Tree !!!
+[N/A]   /2     H     ArrayTree !!!
+[N/A]   /2     H     FunCityList
 
 
-给定一个树，每个node有length field 叶子结点有data field，length field 此节点的所有叶子的data 长度之和
-root(5) => left((3,"aaa"))
-     => right((2, "bb"))
-this represents "aaabb"
-1. find the k the character in this node
-2. remove [l:r) from the tree.
+
+BQ:
+如何跟不好相处的同事相处；讲一下跟不同文化的同事相处的经历。
+1. Unreasonable requirements from coworker or manager. What did you do? What did you learn? What will you do next time?
+2. Decision made based on your values 大概就是遵循自己的原则作出的决定，而不是追求其他的利益
+3. Experience on working on a project which had unclear requirements
+4. a coworker you had a negative impression at first but found it was a misunderstanding
+5. Experience that you led a project
+6. Why google?
+问平时工作中展现diversity的project 工作中遇到过的困难 demo和同事遇到分歧该怎么办等等

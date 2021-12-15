@@ -12,5 +12,46 @@
 [224]   /1     H     Basic Calculator I
 [227]   /1     M     Basic Calculator II
 [772]   /1     H     Basic Calculator III
+[286]   /1     M     Walls and Gates
 [295]   /1     H     Find Median from Data Stream
+[410]   /1     H     Split Array Largest Sum
+[418]   /1     M     Sentence Screen Fitting
+[735]   /1     M     Asteroid Collision
+[792]   /1     M     Number of Matching Subsequences
+[853]   /1     M     Car Fleet
+[1776]  /1     H     Car Fleet II
 [1765]  /1     M     Map of Highest Peak
+[1937]  /1     M     Maximum Number of Points with Cost
+[2096]  /1     M     Step-By-Step Directions From a Binary Tree Node to Another
+
+
+[N/A]   /1           maxValueInQueue
+[N/A]   /2     H     Cord Tree/Rope Tree/Segment Tree !!!
+[N/A]   /2     H     ArrayTree !!!
+[N/A]   /2     H     FunCityList
+
+
+https://www.1point3acres.com/bbs/thread-827588-1-1.html 第二题
+ 给了一道差不多是medium的算法题吧，给一个city list，每一个list有一个fun value，还有一个list是双向的机票, 比如 A <=> B 代表可以从A飞到B也可以从B飞到A，找一条unique path，由 4 个distint cities组成，使得fun value 最大，输出这个最大值
+City  fun value
+A.     1000
+B.     2000
+C.     3000
+D.     4000
+E.     5000
+Tickets: A <=> B, C <=> D, B <=> C, A <=> E, E <=> B
+output E => B => C => D 所以是14000
+做法的话大概是固定中间的两个city然后找一头一尾
+
+
+
+
+BQ:
+如何跟不好相处的同事相处；讲一下跟不同文化的同事相处的经历。
+1. Unreasonable requirements from coworker or manager. What did you do? What did you learn? What will you do next time?
+2. Decision made based on your values 大概就是遵循自己的原则作出的决定，而不是追求其他的利益
+3. Experience on working on a project which had unclear requirements
+4. a coworker you had a negative impression at first but found it was a misunderstanding
+5. Experience that you led a project
+6. Why google?
+问平时工作中展现diversity的project 工作中遇到过的困难 demo和同事遇到分歧该怎么办等等

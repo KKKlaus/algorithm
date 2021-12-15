@@ -4,8 +4,11 @@ public class kSum {
 
     public static void main(String[] args) {
 //        fourSum(new int[]{1,0,-1,0,-2,2}, 0);
-        kSum kSum = new kSum();
-        kSum.test();
+//        kSum kSum = new kSum();
+//        kSum.test();
+
+        String s = "flower";
+        System.out.println(s.indexOf("flight"));
     }
 
     private void test() {
