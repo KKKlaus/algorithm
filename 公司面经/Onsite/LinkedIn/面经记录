@@ -12,14 +12,24 @@
 ----------------Complex Systems------------
 次数     题目
 2        设计一个top k 系统统计分享最多的文章。需要 last 5 min last 1 hour, last 1 week etc.
+1        要求设计一个系统在一个地图上显示领英新注册用户的地理位置，问了一下QPS说只有10，感觉single host都可以解决
 
 
 
 题号    次数    难度   题目
 [5]     /1     M     Longest Palindromic Substring
 [366]   /1     M     Find Leaves of Binary Tree          1) 两个children 最后连到同一个leaf怎么办。2) 一个node出现两次怎么办？类似无限循环了。我‍‌‌‌‌‌‌‍‌‌‌‍‍‌‍‌‍‌‌‌给的是用一个visited来标注。他说还行。最后他给的是用map来存每个node的level。这样的话第一种情况可以handle。第二种情况让他exception out。
-[432]   /1     H     All O`one Data Structure
+[432]   /3     H     All O`one Data Structure
 [716]   /1     M     Max Stack
+[833]   /1     M     Find And Replace in String
+[560]   /1     M     Subarray Sum Equals K
+[373]   /1     M     Find K Pairs with Smallest Sums
+[380]   /2     M     Insert Delete GetRandom O(1)
+[381]   /2     H     Insert Delete GetRandom O(1) - Duplicates
+[706]   /1     H     Design HashMap
+[272]   /1     H     Closest Binary Search Tree Value II
+[156]   /1     M     Binary Tree Upside Down
+
 
 
 
