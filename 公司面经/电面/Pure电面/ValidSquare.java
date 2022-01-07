@@ -28,6 +28,21 @@ public class ValidSquare {
         Point[] arr = new Point[]{p1, p2, p3, p4, p5, p6};
         System.out.println(numOfSquare(arr));
     }
+//    class Point {
+//        int x, y;
+//        Point(int x, int y) {
+//            this.x = x;
+//            this.y = y;
+//        }
+//
+//        @Override
+//        public boolean equals(Object obj) {
+//            if (!(obj instanceof Point)) return false;
+//            Point point = (Point) obj;
+//            return point.x == this.x && point.y == this.y;
+//        }
+//    }
+
 
     // 给n个点，判断有多少个正方形： 每两个点确认一条边，可以确认两个正方形 ： o(n^2)
     public static int numOfSquare(Point[] input) {
@@ -60,7 +75,7 @@ public class ValidSquare {
             }
         }
 
-        return count / 4;
+        return count / 4; // 因为每条边会被重复计算4次，作为任意相邻两点组成的正方形的一条边
     }
 
 
