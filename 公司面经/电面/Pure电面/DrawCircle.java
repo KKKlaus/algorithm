@@ -73,6 +73,7 @@ public class DrawCircle {
     }
 
 
+    // https://blog.51cto.com/u_15273495/2915293
     public static ArrayList<int[]>draw_midPoint() {
         ArrayList<int[]> res = new ArrayList<int[]>();
         int x = 0, y = r;

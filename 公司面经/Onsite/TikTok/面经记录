@@ -1,6 +1,9 @@
 题号    次数    难度   题目
+[28]    /1     E     Implement strStr()
 [33]    /1     M     Search in Rotated Sorted Array系列
+[50]    /1     M     Pow(x, n)
 [79]    /1     M     Word Search
+[91]    /1     M     Decode Ways
 [124]   /1     H     Binary Tree Maximum Path Sum
 [282]   /1     H     Expression Add Operators
 [328]   /1     M     Odd Even Linked List
