@@ -1,5 +1,6 @@
 package Pure电面;
 
+import java.util.LinkedList;
 import java.util.Queue;
 import java.util.concurrent.locks.Lock;
 
@@ -10,6 +11,8 @@ import java.util.concurrent.locks.Lock;
 //                     放后面能有效解决， 或者两个Queue，在交换的时候lock
 // call()可能有lock所有后面会在call前面unlock
 
+//https://www.1point3acres.com/bbs/thread-299273-1-1.html
+// https://www.evernote.com/shard/s260/client/snv?noteGuid=a01e5b26-d3eb-44c0-8ef4-01086605f675&noteKey=da31dd196df57906d67ab4ea189304f1&sn=https%3A%2F%2Fwww.evernote.com%2Fshard%2Fs260%2Fsh%2Fa01e5b26-d3eb-44c0-8ef4-01086605f675%2Fda31dd196df57906d67ab4ea189304f1&title=PureStorage%2BMultithread%2BPhone%2BQuestion
 public class EventFire {
 
         class Callback {
