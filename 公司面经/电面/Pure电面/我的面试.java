@@ -1,56 +1,59 @@
 package Pure电面;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class 我的面试 {
 
-//    class PureLib {
-//        // numIds: amount of unique ids we want to generate
-//        // returns: An array of unique ids
-//        // available to use
-//        // located at a centralized server,
-//        // guarantees global uniqueness
-//        // 1 sec / call on average
-//        public int[] getIds(int numIds) {
-//
-//        }
-//    }
-//
-//    class PureAPI {
-//        // returns: a unique id
-//
-//        int count = 0;
-//        Queue<Integer> queue = new LinkedList<>();
-//        public void enQueue() {
-//            PureLib lib = new PureLib();
-//            int[] idList = lib.getIds(1000);
-//            for (int i = 0; i < 1000; i++) {
-//                queue.offer(idList[i]);
-//            }
-//        }
-//
-//
-//        // Date timestamp;
-//
-//        // 1000 calls / sec on average
-//        public int getOneId() {
-//            // TODO
-//            // if (timestamp == null || Date.now() - timestamp >= 1s) {
-//            //     preCall();
-//            //     timestamp = Date.now();
-//            // }
-//            if (queue.size() == 0) {
-//                enQueue();
-//            }
-//            return queue.poll();
-//        }
-//
-//        // 0s : queue : 1000 ids = 1,2,3,4 ... 1000  -> id = 1
-//        // 0.001s :  id = 2
-//        // ....
-//        // 1s : queue : 1000ids =  1001 ... 2000 -> id = 1001
-//
-//        // Consumer - producer
-//        // 2 queues
-//    }
+    class PureLib {
+        // numIds: amount of unique ids we want to generate
+        // returns: An array of unique ids
+        // available to use
+        // located at a centralized server,
+        // guarantees global uniqueness
+        // 1 sec / call on average
+        public int[] getIds(int numIds) {
+            return null;
+        }
+    }
+
+    class PureAPI {
+        // returns: a unique id
+
+        int count = 0;
+        Queue<Integer> queue = new LinkedList<>();
+        public void enQueue() {
+            PureLib lib = new PureLib();
+            int[] idList = lib.getIds(1000);
+            for (int i = 0; i < 1000; i++) {
+                queue.offer(idList[i]);
+            }
+        }
+
+
+        // Date timestamp;
+
+        // 1000 calls / sec on average
+        public int getOneId() {
+            // TODO
+            // if (timestamp == null || Date.now() - timestamp >= 1s) {
+            //     preCall();
+            //     timestamp = Date.now();
+            // }
+            if (queue.size() == 0) {
+                enQueue();
+            }
+            return queue.poll();
+        }
+
+        // 0s : queue : 1000 ids = 1,2,3,4 ... 1000  -> id = 1
+        // 0.001s :  id = 2
+        // ....
+        // 1s : queue : 1000ids =  1001 ... 2000 -> id = 1001
+
+        // Consumer - producer
+        // 2 queues
+    }
 
 
 

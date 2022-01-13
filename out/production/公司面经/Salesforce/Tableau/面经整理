@@ -1,0 +1,18 @@
+系统设计：
+1. 第三轮 system design，但是依旧是 BQ 开场，而且还是 most proud project。至于 design 是设计一个 IoT service data pipeline，有 IoT 设备 input weather data，还需要设计用户端的 user flow。这轮感觉不是很好，毕竟第一次面 design，比较茫然，只是把 diagram 画出来了，并且讨论了一下 data sharding，而且很多地方是这个面我的人给我的思路。
+2.OOD, 设计一个系统，高速公路链接很多地点，实时更新计算从地点A->地点B的最快路径
+3.问数据流处理， 要求stream 处理写入cache， 还要求aggregation 写入db。我感觉是想考怎么scale，毕竟数据大，怎么监控
+4. 设计Spotify
+5. Supermarket checkout system
+
+
+
+
+
+BQ:
+• Project most prod of
+• Make decision without data
+• Failed to meet expectation
+• People hard to deal with
+• Way to learn new things
+• Most challenging project

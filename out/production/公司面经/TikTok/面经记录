@@ -1,0 +1,37 @@
+题号    次数    难度   题目
+[28]    /1     E     Implement strStr()
+[33]    /1     M     Search in Rotated Sorted Array系列
+[50]    /1     M     Pow(x, n)
+[79]    /1     M     Word Search
+[91]    /1     M     Decode Ways
+[124]   /1     H     Binary Tree Maximum Path Sum
+[282]   /1     H     Expression Add Operators
+[328]   /1     M     Odd Even Linked List
+[981]   /1     M     Time Based Key-Value Store
+[1352]  /1     M     Product of the Last K Numbers
+
+
+
+
+
+
+[N/A]   /1     H     FindDistanceInaBinaryTree
+[N/A]   /1     H     树里给两个节点输出路径: FindDistanceInaBinaryTree里的printPath
+
+
+
+
+
+
+
+
+
+--------------------------------System Design -----------------------------------
+1. HM轮 BQ + SD 设计痘印，用户可以上传video，并且可以在profile页面看‍‌‌‌‌‌‌‍‌‌‌‍‍‌‍‌‍‌‌‌到已上传video，并且可以删除和恢复。
+2. rate limiter
+3. 让设计搜索并批量删除视频，删除一定时间段内可以恢复 https://www.1point3acres.com/bbs/thread-831401-1-1.html
+4. WeChat group chat
+
+
+
+

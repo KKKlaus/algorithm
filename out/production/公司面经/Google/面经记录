@@ -31,20 +31,6 @@
 [N/A]   /2     H     FunCityList
 
 
-https://www.1point3acres.com/bbs/thread-827588-1-1.html 第二题
- 给了一道差不多是medium的算法题吧，给一个city list，每一个list有一个fun value，还有一个list是双向的机票, 比如 A <=> B 代表可以从A飞到B也可以从B飞到A，找一条unique path，由 4 个distint cities组成，使得fun value 最大，输出这个最大值
-City  fun value
-A.     1000
-B.     2000
-C.     3000
-D.     4000
-E.     5000
-Tickets: A <=> B, C <=> D, B <=> C, A <=> E, E <=> B
-output E => B => C => D 所以是14000
-做法的话大概是固定中间的两个city然后找一头一尾
-
-
-
 
 BQ:
 如何跟不好相处的同事相处；讲一下跟不同文化的同事相处的经历。
