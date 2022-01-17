@@ -1,37 +1,83 @@
-题号    次数    难度   题目
-[28]    /1     E     Implement strStr()
-[33]    /1     M     Search in Rotated Sorted Array系列
-[50]    /1     M     Pow(x, n)
-[79]    /1     M     Word Search
-[91]    /1     M     Decode Ways
-[124]   /1     H     Binary Tree Maximum Path Sum
-[282]   /1     H     Expression Add Operators
-[328]   /1     M     Odd Even Linked List
-[981]   /1     M     Time Based Key-Value Store
-[1352]  /1     M     Product of the Last K Numbers
-
-
-
-
-
-
-[N/A]   /1     H     FindDistanceInaBinaryTree
-[N/A]   /1     H     树里给两个节点输出路径: FindDistanceInaBinaryTree里的printPath
-
-
-
-
-
-
-
-
 
 --------------------------------System Design -----------------------------------
 1. HM轮 BQ + SD 设计痘印，用户可以上传video，并且可以在profile页面看‍‌‌‌‌‌‌‍‌‌‌‍‍‌‍‌‍‌‌‌到已上传video，并且可以删除和恢复。
 2. rate limiter
 3. 让设计搜索并批量删除视频，删除一定时间段内可以恢复 https://www.1point3acres.com/bbs/thread-831401-1-1.html
-4. WeChat group chat
+4. WeChat group chat/ one to one chat， notification。 减轻group chat负载压力
+5. Trending Tags
+6。 tinyURL侧重分布式实现
+7。 推荐系统？
+8。深入地问了怎么设计tiktok.com
+  mobile 如果你有很差的手机怎么放视频
+  硬件有什么limitation 怎么优化
+  如果不是一个code repo而是2个分别的mobile和web怎么serve同一个url
+  最后问了cache 给了一个api然后要同时满足两种可能的情况
+  普通情况是每10分钟update一次 特殊情况是20s
+9。设计一个db client和db server，server的interface包括read和write，要求dbclient实现increment和read，因为server和client是一对多的状态，我感觉主要考点在如何保证数据的consistency
+10。Design order tracking system.
+   主要功能有查看单个order, 查看order history, 以及与External carrier service (USPS, etc.)交互来更新shipmennt status.
+11。给一个DAG，表示execution node之间的依赖关系，每个node会根据dependency nodes的结果，做一系列计算。给一个list of node，得到每个node对应的结果。聊到了node的设计，cache的使用，如何partition。感觉还是有点拉，最后聊到partition的时候理解错误，跟面试官思路不大一样。
+   设计完事以后问了一些bq。1，以前cross team的合作的经历。2.如‍‌‌‌‌‌‌‍‌‌‌‍‍‌‍‌‍‌‌‌果让你接手一个已有的项目，大概需要2-3个人maintain的scale，你会怎么做。
 
+
+
+
+
+--------------------------------概念理解 -----------------------------------
+1.系统里面 静态业务 动态业务
+(1)Stateful(动态) services keep track of sessions or transactions and react differently to the same inputs based on that history.
+   Stateless(静态) services rely on clients to maintain sessions and center around operations that manipulate resources, rather than the state.
+(2)stateful理解为会话和事务信息存在了server，想想每个用户request发到对应server，如果某个server down，那么改用户的request处理不了，
+   或者re-route到其他server但要从头开始(如果checkout或login信息丢失)。
+   而stateless理解为用户request发到web tier，而他们对应的会话事务信息存在了shared db里，所有server down没问题。这样做有利于scale, handle crash等等
+
+
+2. http vs https
+HTTPS is HTTP with encryption.
+The difference between the two protocols is that HTTPS uses TLS (SSL：Security Socket Layer) to encrypt normal HTTP requests and responses.
+As a result, HTTPS is far more secure than HTTP
+
+
+3. https vs tcp
+(1) 前提知识：从底部往上层次为：网络接入层(物理层，数据链路层) -> 网络层 -> 传输层 -> 应用层(会话层，表示层，应用层)
+(2) 这两个一般不会比较，因为https在应用层(application layer)：应用层的目的是向应用程序提供网络接口，直接向用户提供服务
+                      而tcp在传输层(transport layer): 负责端口与端口对接
+(2) HTTP is a protocol for fetching resources such as HTML documents. ... It is an application layer protocol that is sent over TCP,
+    TCP manages the data stream, whereas HTTP describes what the data in the stream contains.
+
+
+4. tcp vs udp
+TCP is a connection-oriented protocol, whereas UDP is a connectionless protocol.
+A key difference between TCP and UDP is speed, as TCP is comparatively slower than UDP.
+Overall, UDP is a much faster, simpler, and efficient protocol,
+however, retransmission of lost data packets is only possible with TCP. （如netflix用的tcp，确保数据不丢失）
+
+
+5.输入网页 url 后会应用到哪些协议
+(1) DNS协议，http协议，https协议属于应用层 应用层是体系结构中的最高层。 ...
+    TCP/UDP属于传输层 传输层的任务就是负责主机中两个进程之间的通信。 ...
+    IP协议，ARP协议属于网络层 网络层负责为分组交换网上的不同主机提供通信。
+(2) DNS 解析:将域名解析成 IP 地址
+    TCP 连接：TCP 三次握手
+    发送 HTTP 请求
+    服务器处理请求并返回 HTTP 报文
+    浏览器解析渲染页面
+    断开连接：TCP 四次挥手
+
+
+6. Get VS Post
+Both GET and POST method is used to transfer data from client to server in HTTP protocol
+but Main difference between POST and GET method is that GET carries request parameter appended in URL string
+while POST carries request parameter in message body which makes it more secure way of transferring data from client to server
+
+
+7.讲讲 稳定排序，不稳定排序
+即在原序列中，A1=A2，且A1在A2之前，而在排序后的序列中，A1仍在A2之前，则称这种排序算法是稳定的；否则称为不稳定的。
+不稳定排序算法: 堆排序、快速排序、希尔排序、直接选择排序
+稳定排序算法: 基数排序、冒泡排序、直接插入排序、折半插入排序、归并排序
+
+选择排序算法里面包括了交换，这种交换每次从未排序的数中选择最小的与未排序的第一个交换，破坏了相对顺序!! 所以不是稳定的排序
+想想块排和堆排也是会破坏相对顺序，merge sort不会破坏相对顺序
 
 
 
