@@ -1,8 +1,8 @@
 
 --------------------------------System Design -----------------------------------
-1. HM轮 BQ + SD 设计痘印，用户可以上传video，并且可以在profile页面看‍‌‌‌‌‌‌‍‌‌‌‍‍‌‍‌‍‌‌‌到已上传video，并且可以删除和恢复。
+(1) HM轮 BQ + SD 设计痘印，用户可以上传video，并且可以在profile页面看‍‌‌‌‌‌‌‍‌‌‌‍‍‌‍‌‍‌‌‌到已上传video，并且可以删除和恢复。
 2. rate limiter
-3. 让设计搜索并批量删除视频，删除一定时间段内可以恢复 https://www.1point3acres.com/bbs/thread-831401-1-1.html
+(3). 让设计搜索并批量删除视频，删除一定时间段内可以恢复 https://www.1point3acres.com/bbs/thread-831401-1-1.html     soft delete: isDelete /delete_at 大量数据的话以这它做索引视图
 4. WeChat group chat/ one to one chat， notification。 减轻group chat负载压力
 5. Trending Tags
 6。 tinyURL侧重分布式实现
