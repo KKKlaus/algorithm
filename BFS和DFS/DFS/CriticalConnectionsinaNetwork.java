@@ -36,4 +36,14 @@ public class CriticalConnectionsinaNetwork {
         }
         return minDepth;
     }
+
+    public static void main(String[] args) {
+        List<List<Integer>> connections = new ArrayList<>();
+        connections.add(Arrays.asList(0,1));
+        connections.add(Arrays.asList(1,2));
+        connections.add(Arrays.asList(2,0));
+        connections.add(Arrays.asList(1,3));
+        CriticalConnectionsinaNetwork test = new CriticalConnectionsinaNetwork();
+        test.criticalConnections(4, connections);
+    }
 }

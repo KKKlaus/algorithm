@@ -5,11 +5,12 @@
       <module fileurl="file://$PROJECT_DIR$/BFS和DFS/BFS和DFS.iml" filepath="$PROJECT_DIR$/BFS和DFS/BFS和DFS.iml" />
       <module fileurl="file://$PROJECT_DIR$/DP类/DP类.iml" filepath="$PROJECT_DIR$/DP类/DP类.iml" />
       <module fileurl="file://$PROJECT_DIR$/Design类/Design类.iml" filepath="$PROJECT_DIR$/Design类/Design类.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MyTest/MyTest.iml" filepath="$PROJECT_DIR$/MyTest/MyTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/algorithm.iml" filepath="$PROJECT_DIR$/.idea/algorithm.iml" />
       <module fileurl="file://$PROJECT_DIR$/二分搜索/二分搜索.iml" filepath="$PROJECT_DIR$/二分搜索/二分搜索.iml" />
       <module fileurl="file://$PROJECT_DIR$/公司面经/公司面经.iml" filepath="$PROJECT_DIR$/公司面经/公司面经.iml" />
       <module fileurl="file://$PROJECT_DIR$/单调栈和单调队列/单调栈和单调队列.iml" filepath="$PROJECT_DIR$/单调栈和单调队列/单调栈和单调队列.iml" />
-      <module fileurl="file://$PROJECT_DIR$/回溯/回溯.iml" filepath="$PROJECT_DIR$/回溯/回溯.iml" />
+      <module fileurl="file://$PROJECT_DIR$/回溯和排列组合/回溯.iml" filepath="$PROJECT_DIR$/回溯和排列组合/回溯.iml" />
       <module fileurl="file://$PROJECT_DIR$/图/图.iml" filepath="$PROJECT_DIR$/图/图.iml" />
       <module fileurl="file://$PROJECT_DIR$/基本数据结构/基本数据结构.iml" filepath="$PROJECT_DIR$/基本数据结构/基本数据结构.iml" />
       <module fileurl="file://$PROJECT_DIR$/基本数组排序/基本数组排序.iml" filepath="$PROJECT_DIR$/基本数组排序/基本数组排序.iml" />
